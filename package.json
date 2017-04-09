@@ -1,0 +1,26 @@
+{
+  "name": "mern-stack-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webapp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasCW/MERN-Stack-Tutorial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucasCW/MERN-Stack-Tutorial/issues"
+  },
+  "homepage": "https://github.com/LucasCW/MERN-Stack-Tutorial#readme",
+  "dependencies": {
+    "babel-preset-react": "^6.24.1",
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1"
+  }
+}
