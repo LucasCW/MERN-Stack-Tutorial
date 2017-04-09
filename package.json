@@ -18,9 +18,16 @@
   "homepage": "https://github.com/LucasCW/MERN-Stack-Tutorial#readme",
   "dependencies": {
     "babel-preset-react": "^6.24.1",
+    "babelify": "^7.3.0",
     "body-parser": "^1.17.1",
+    "browserify": "^14.3.0",
     "express": "^4.15.2",
-    "mongodb": "^2.2.25"
+    "gulp": "^3.9.1",
+    "jquery": "^3.2.1",
+    "mongodb": "^2.2.25",
+    "react": "^15.5.3",
+    "react-dom": "^15.5.3",
+    "vinyl-source-stream": "^1.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1"

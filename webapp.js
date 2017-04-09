@@ -8,11 +8,6 @@ var app = express();
 
 app.use(express.static('static'));
 
-var bugData = [
-	{id: 1, priority: 'p1', status: 'open', owner: 'Ravan', title: 'app crashes on open'},
-	{id: 2, priority: 'p2', status: 'new', owner: 'Eddie', title: 'Misaligned border on panel'},
-];
-
 app.get('/api/bugs', (req, res) => {
 	db.collection("bugs").find().toArray((err, docs) => {
 		res.json(docs);

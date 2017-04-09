@@ -1,12 +1,7 @@
-// var BugList = React.createClass({
-// 	render() {
-// 		return (
-// 			<div>
-// 				The bug list would come here.
-// 			</div>
-// 		)
-// 	}
-// });
+var React = require('react');
+var ReactDOM = require('react-dom');
+var $ = require('jquery');
+
 class BugFilter extends React.Component{
 	render() {
 		return (
@@ -38,7 +33,7 @@ class BugTable extends React.Component{
 		console.log("Rendering bug table, num items:", this.props.bugs.length);
 		return (
 			<table>
-				<thread>
+				<thead>
 					<tr>
 						<th>Id</th>
 						<th>Status</th>
@@ -46,7 +41,7 @@ class BugTable extends React.Component{
 						<th>Owner</th>
 						<th>Title</th>
 					</tr>
-				</thread>
+				</thead>
 				<tbody>
 					{bugRows}
 				</tbody>
