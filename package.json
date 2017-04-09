@@ -18,6 +18,7 @@
   "homepage": "https://github.com/LucasCW/MERN-Stack-Tutorial#readme",
   "dependencies": {
     "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.17.1",
     "express": "^4.15.2"
   },
   "devDependencies": {
