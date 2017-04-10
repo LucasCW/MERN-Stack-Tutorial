@@ -17,18 +17,20 @@
   },
   "homepage": "https://github.com/LucasCW/MERN-Stack-Tutorial#readme",
   "dependencies": {
-    "babel-preset-react": "^6.24.1",
-    "babelify": "^7.3.0",
-    "body-parser": "^1.17.1",
-    "browserify": "^14.3.0",
-    "express": "^4.15.2",
-    "gulp": "^3.9.1",
-    "jquery": "^3.2.1",
-    "mongodb": "^2.2.25",
-    "react": "^15.5.3",
-    "react-dom": "^15.5.3",
+    "babel-preset-react": "^6.3.13",
+    "babelify": "^7.2.0",
+    "body-parser": "^1.14.2",
+    "browserify": "^12.0.1",
+    "express": "^4.13.3",
+    "gulp": "^3.9.0",
+    "history": "^1.17.0",
+    "jquery": "^2.1.4",
+    "mongodb": "^2.1.2",
+    "react": "^0.14.5",
+    "react-dom": "^0.14.5",
+    "react-router": "^1.0.3",
     "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.9.0"
+    "watchify": "^3.6.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1"

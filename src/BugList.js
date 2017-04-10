@@ -64,9 +64,6 @@ class BugList extends React.Component{
 			this.setState({ bugs:data });
 		});
 	}
-	// getInitialState: function () {
-		// return {bugs:bugData};
-	// },
 
 	render() {
 		console.log("Rendering bug list, num items:", this.state.bugs.length);
