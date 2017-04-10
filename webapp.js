@@ -9,7 +9,18 @@ var app = express();
 app.use(express.static('static'));
 
 app.get('/api/bugs', (req, res) => {
-	db.collection("bugs").find().toArray((err, docs) => {
+
+	console.log("Query string", req.query);
+
+	var filter = {};
+
+	if (req.query.priority)
+		filter.priority = req.query.priority;
+	if (req.query.status)
+		filter.status = req.query.status;
+
+
+	db.collection("bugs").find(filter).toArray((err, docs) => {
 		res.json(docs);
 	});
 });

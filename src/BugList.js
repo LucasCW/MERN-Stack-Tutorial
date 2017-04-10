@@ -51,10 +51,16 @@ class BugList extends React.Component{
 			bugs: []
 		};
 		this.addBug = this.addBug.bind(this);
+		this.loadData = this.loadData.bind(this);
 	}
 
 	componentDidMount() {
-		$.ajax('/api/bugs').done((data) => {
+		this.loadData({priority: "P1", status: "New"});
+		console.log('hahahhaah');
+	}
+
+	loadData(filter) {
+		$.ajax('/api/bugs', {data: filter}).done((data) => {
 			this.setState({ bugs:data });
 		});
 	}
@@ -67,7 +73,7 @@ class BugList extends React.Component{
 		return (
 			<div>
 				<h1>Bug Tracker</h1>
-				<BugFilter />
+				<BugFilter submitHandler={this.loadData}/>
 				<hr />
 				<BugTable bugs={this.state.bugs}/>
 				<hr />
