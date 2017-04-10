@@ -36,3 +36,5 @@ gulp.task('watch', () => {
 
 	return b;
 });
+
+gulp.task('default', ['watch']);

@@ -3,15 +3,16 @@ var ReactDOM = require('react-dom');
 
 class BugFilter extends React.Component{
 
-	constructor() {
-		super();
-		this.state = {status: "", priority: ""};
+	constructor(props) {
+		super(props);
+		var initFilter = this.props.initFilter;
+		this.state = {status: initFilter.status, priority: initFilter.priority};
 		this.onChangeStatus = this.onChangeStatus.bind(this);
 		this.onChangePriority = this.onChangePriority.bind(this);
 		this.submit = this.submit.bind(this);
 	}
 	render() {
-		console.log("Rendering BugFilter");
+		console.log("Rendering BugFilter, state=", this.state);
 		return (
 			<div>
 				<h3>Filter</h3>
@@ -36,6 +37,16 @@ class BugFilter extends React.Component{
 		)
 	}
 
+	componentWillReceiveProps(newProps) {
+		if (newProps.initFilter.status === this.state.status 
+			&& newProps.initFilter.priority === this.state.priority) {
+			console.log("BugFilter: componentWillReceiveProps, no change");
+			return;
+		}
+		console.log("BugFilter: componentWillReceiveProps, new filter:", newProps.initFilter);
+		this.setState({ status: newProps.initFilter.status, priority: newProps.initFilter.priority});
+	}
+
 	onChangeStatus(e) {
 		this.setState({ status: e.target.value });
 	}
@@ -45,7 +56,13 @@ class BugFilter extends React.Component{
 	}
 
 	submit(e) {
-		this.props.submitHandler({ priority: this.state.priority, status: this.state.status});
+		var newFilter = {};
+		if (this.state.priority)
+			newFilter.priority = this.state.priority;
+		if (this.state.status)
+			newFilter.status = this.state.status;
+		console.log(this.props);
+		this.props.submitHandler(newFilter);
 	}
 };
 

@@ -8,7 +8,7 @@ class BugAdd extends React.Component{
 	}
 
 	render() {
-		console.log("Rendering BugAdd");
+		// console.log("Rendering BugAdd");
 		return (
 			<form name="bugAdd">
 				<input type="text" name="owner" placeholder="Owner" />
